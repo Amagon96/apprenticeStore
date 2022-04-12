@@ -14,15 +14,28 @@ import com.example.demo.models.Products;
 @RequestMapping(value = "/products")
 public class ProductController {
 
-    List<Products> products = List.of(new Products(
-                1L,
-                        "Short deportivo adidas",
-                        "Un short para hacer ejercicio",
-                BigDecimal.valueOf(49.99)), new Products(
-                2L,
-                        "Tenis Nike",
-                        "Tenis para correr nike",
-                BigDecimal.valueOf(49.99)));
+    List<Products> products = List.of(
+            new Products(
+                    1L,
+                    "Short Adidas",
+                    "Un short para hacer ejercicio",
+                    BigDecimal.valueOf(49.99)),
+            new Products(
+                    2L,
+                    "Tenis Nike",
+                    "Tenis para correr nike",
+                    BigDecimal.valueOf(49.99)),
+            new Products(
+                    3L,
+                    "Tenis Adidas",
+                    "Tenis pero de adidas",
+                    BigDecimal.valueOf(49.99)),
+            new Products(
+                    4L,
+                    "Short Nike",
+                    "Uno short pero de nike",
+                    BigDecimal.valueOf(49.99))
+    );
 
     @GetMapping(value = "/get_products")
     public List<Products> getProducts() {

@@ -1,18 +1,21 @@
 package com.example.demo.models;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Products {
     private Long id;
     private String name;
     private String description;
     private BigDecimal price;
+    private List<Categories> categories;
 
-    public Products(Long id, String name, String description, BigDecimal price) {
+    public Products(Long id, String name, String description, BigDecimal price, List<Categories> categories) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.categories = categories;
     }
 
     public Products(Long id, String name, BigDecimal price) {
@@ -51,5 +54,9 @@ public class Products {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public List<Categories> getCategories() {
+        return categories;
     }
 }
